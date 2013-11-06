@@ -32,6 +32,10 @@ if(STATIC_ANALYZER)
     set(CMAKE_CXX_FLAGS_RELEASE "")
 endif()
 
+if(CXX_11)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x -g -ftest-coverage -fprofile-arcs")
+endif()
+
 # Output compilers settings
 include(cmake/VerboseCompilerMessage.cmake)
 
